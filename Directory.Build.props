@@ -8,7 +8,7 @@
     <Product>Bluehill.TaskbarMethods</Product>
     <Copyright>Copyright © Bluehill 2024</Copyright>
     <PackageProjectUrl>https://na1307.github.io/Bluehill.TaskbarMethods</PackageProjectUrl>
-    <PackageTags>comilperservices;na1307;bluehill</PackageTags>
+    <PackageTags>taskbar;na1307;bluehill</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>https://na1307.github.io/Bluehill.TaskbarMethods/CHANGELOG.html</PackageReleaseNotes>
