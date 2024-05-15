@@ -7,6 +7,7 @@
     <Company>Bluehill</Company>
     <Product>Bluehill.TaskbarMethods</Product>
     <Copyright>Copyright © Bluehill 2024</Copyright>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <PackageProjectUrl>https://na1307.github.io/Bluehill.TaskbarMethods</PackageProjectUrl>
     <PackageTags>taskbar;na1307;bluehill</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -17,7 +18,7 @@
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net3.5-client' or '$(TargetFramework)' == 'net4.0-client'">
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 </Project>
