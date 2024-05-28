@@ -3,6 +3,7 @@
 /// <summary>
 /// Used by <see cref="THUMBBUTTON"/> to control specific states and behaviors of the button.
 /// </summary>
+[Flags]
 public enum THUMBBUTTONFLAGS {
     /// <summary>
     /// The button is active and available to the user.

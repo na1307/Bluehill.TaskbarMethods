@@ -3,6 +3,7 @@
 /// <summary>
 /// Used by the <see cref="THUMBBUTTON"/> structure to specify which members of that structure contain valid data.
 /// </summary>
+[Flags]
 public enum THUMBBUTTONMASK {
     /// <summary>
     /// The <see cref="THUMBBUTTON.iBitmap"/> member contains valid information.
