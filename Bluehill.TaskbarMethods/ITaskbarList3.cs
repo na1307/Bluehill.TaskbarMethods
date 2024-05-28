@@ -18,7 +18,7 @@ internal interface ITaskbarList3 : ITaskbarList2 {
 
     // ITaskbarList3
     void SetProgressValue(IntPtr hwnd, ulong ullCompleted, ulong ullTotal);
-    void SetProgressState(IntPtr hwnd, TaskbarStates tbpFlags);
+    void SetProgressState(IntPtr hwnd, TBPFLAG tbpFlags);
     void RegisterTab(IntPtr hwndTab, IntPtr hwndMDI);
     void UnregisterTab(IntPtr hwndTab);
     void SetTabOrder(IntPtr hwndTab, IntPtr hwndInsertBefore);

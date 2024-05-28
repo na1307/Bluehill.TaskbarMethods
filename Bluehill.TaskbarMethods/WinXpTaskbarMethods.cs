@@ -3,11 +3,11 @@
 /// <summary>
 /// Includes taskbar methods supported starting from Windows XP.
 /// </summary>
-public class WinXpTaskbarMethods : TaskbarMethods {
+public class WinXPTaskbarMethods : TaskbarMethods {
     private static readonly bool winXporGreater = Environment.OSVersion.Version >= new Version(5, 1);
     private static ITaskbarList2? taskbarList2 = null;
 
-    private protected WinXpTaskbarMethods() { }
+    private protected WinXPTaskbarMethods() { }
 
     /// <summary>
     /// Marks a window as full-screen.

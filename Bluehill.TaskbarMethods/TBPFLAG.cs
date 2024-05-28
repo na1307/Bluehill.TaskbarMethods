@@ -3,9 +3,9 @@
 /// <summary>
 /// TaskbarStates
 /// </summary>
-public enum TaskbarStates {
+public enum TBPFLAG {
     /// <summary>
-    /// Stops displaying progress and returns the button to its normal state. Call <see cref="Win7TaskbarMethods.SetProgressState(IntPtr, TaskbarStates)"/> method with this flag to dismiss the progress bar when the operation is complete or canceled.
+    /// Stops displaying progress and returns the button to its normal state. Call <see cref="Win7TaskbarMethods.SetProgressState(IntPtr, TBPFLAG)"/> method with this flag to dismiss the progress bar when the operation is complete or canceled.
     /// </summary>
     NoProgress = 0,
 

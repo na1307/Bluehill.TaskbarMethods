@@ -3,7 +3,7 @@
 /// <summary>
 /// Includes taskbar methods supported starting from Windows 7.
 /// </summary>
-public class Win7TaskbarMethods : WinXpTaskbarMethods {
+public class Win7TaskbarMethods : WinXPTaskbarMethods {
     private static ITaskbarList4? taskbarList4 = null;
     private static readonly bool win7orGreater = Environment.OSVersion.Version >= new Version(6, 1);
 
@@ -26,7 +26,7 @@ public class Win7TaskbarMethods : WinXpTaskbarMethods {
     /// </summary>
     /// <param name="windowHandle">The handle of the window in which the progress of an operation is being shown. This window's associated taskbar button will display the progress bar.</param>
     /// <param name="taskbarState">Flags that control the current state of the progress button. Specify only one of the following flags; all states are mutually exclusive of all others.</param>
-    public static void SetProgressState(IntPtr windowHandle, TaskbarStates taskbarState) => getTaskbarList4().SetProgressState(windowHandle, taskbarState);
+    public static void SetProgressState(IntPtr windowHandle, TBPFLAG taskbarState) => getTaskbarList4().SetProgressState(windowHandle, taskbarState);
 
     /// <summary>
     /// Informs the taskbar that a new tab or document thumbnail has been provided for display in an application's taskbar group flyout.
