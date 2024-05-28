@@ -59,7 +59,7 @@ public class Win7TaskbarMethods : WinXPTaskbarMethods {
     /// <param name="hwndTab">Handle of the active tab window. This handle must already be registered through <see cref="RegisterTab(IntPtr, IntPtr)"/>. This value can be <see cref="IntPtr.Zero"/> if no tab is active.</param>
     /// <param name="hwndMDI">Handle of the application's main window. This value tells the taskbar which group the thumbnail is a member of.</param>
     /// <exception cref="NotSupportedException">If the operating system is less than Windows 7</exception>
-    public static void SetTabActive(IntPtr hwndTab, IntPtr hwndMDI) => getTaskbarList4().SetTabActive(hwndTab, hwndMDI);
+    public static void SetTabActive(IntPtr hwndTab, IntPtr hwndMDI) => getTaskbarList4().SetTabActive(hwndTab, hwndMDI, 0);
 
     /// <summary>
     /// Adds a thumbnail toolbar with a specified set of buttons to the thumbnail image of a window in a taskbar button flyout.

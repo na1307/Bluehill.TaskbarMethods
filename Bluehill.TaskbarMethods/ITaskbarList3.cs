@@ -22,7 +22,7 @@ internal interface ITaskbarList3 : ITaskbarList2 {
     void RegisterTab(IntPtr hwndTab, IntPtr hwndMDI);
     void UnregisterTab(IntPtr hwndTab);
     void SetTabOrder(IntPtr hwndTab, IntPtr hwndInsertBefore);
-    void SetTabActive(IntPtr hwndTab, IntPtr hwndMDI, uint dwReserved = 0);
+    void SetTabActive(IntPtr hwndTab, IntPtr hwndMDI, uint dwReserved);
     void ThumbBarAddButtons(IntPtr hwnd, uint cButtons, [MarshalAs(UnmanagedType.LPArray)] THUMBBUTTON[] pButtons);
     void ThumbBarUpdateButtons(IntPtr hwnd, uint cButtons, [MarshalAs(UnmanagedType.LPArray)] THUMBBUTTON[] pButtons);
     void ThumbBarSetImageList(IntPtr hwnd, IntPtr himl);

@@ -53,5 +53,5 @@ public class TaskbarMethods {
     [ComImport]
     [Guid("56FDF344-FD6D-11d0-958A-006097C9A090")]
     [ClassInterface(ClassInterfaceType.None)]
-    private class TaskbarList { }
+    private class TaskbarList;
 }
