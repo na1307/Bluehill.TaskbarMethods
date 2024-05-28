@@ -19,6 +19,7 @@ public class WinXPTaskbarMethods : TaskbarMethods {
     /// <para>Setting the value of <paramref name="fullscreen"/> to <see langword="false"/> removes the full-screen marking, but does not cause the Shell to treat the window as though it were definitely not full-screen.</para>
     /// <para>With a <see langword="false"/> <paramref name="fullscreen"/> value, the Shell depends on its automatic detection facility to specify how the window should be treated, possibly still flagging the window as full-screen.</para>
     /// </remarks>
+    /// <exception cref="NotSupportedException">If the operating system is less than Windows XP</exception>
     public static void MarkFullscreenWindow(IntPtr windowHandle, bool fullscreen) => getTaskbarList2().MarkFullscreenWindow(windowHandle, fullscreen);
 
     private static ITaskbarList2 getTaskbarList2() {
