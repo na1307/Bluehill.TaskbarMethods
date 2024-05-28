@@ -3,6 +3,7 @@
 /// <summary>
 /// Used by the <see cref="Win7TaskbarMethods.SetTabProperties(IntPtr, STPFLAG)"/> method to specify tab properties.
 /// </summary>
+[Flags]
 public enum STPFLAG {
     /// <summary>
     /// No specific property values are specified. The default behavior is used: the tab window provides a thumbnail and peek image, either live or static as appropriate.
