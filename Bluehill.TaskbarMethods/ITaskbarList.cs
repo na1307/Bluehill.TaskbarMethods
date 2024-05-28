@@ -7,14 +7,9 @@ namespace Bluehill.TaskbarMethods;
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 internal interface ITaskbarList {
     // ITaskbarList
-    [PreserveSig]
     void HrInit();
-    [PreserveSig]
     void AddTab(IntPtr hwnd);
-    [PreserveSig]
     void DeleteTab(IntPtr hwnd);
-    [PreserveSig]
     void ActivateTab(IntPtr hwnd);
-    [PreserveSig]
     void SetActiveAlt(IntPtr hwnd);
 }
