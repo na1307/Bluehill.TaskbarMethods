@@ -31,5 +31,5 @@ internal interface ITaskbarList4 : ITaskbarList3 {
     new void SetThumbnailClip(IntPtr hwnd, in RECT prcClip);
 
     // ITaskbarList4
-    void SetTabProperties(IntPtr hwndTab, StpFlag stpFlags);
+    void SetTabProperties(IntPtr hwndTab, STPFLAG stpFlags);
 }

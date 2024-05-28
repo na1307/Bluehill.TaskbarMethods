@@ -1,6 +1,6 @@
 ﻿namespace Bluehill.TaskbarMethods;
 
-public enum ThumbButtonFlags {
+public enum THUMBBUTTONFLAGS {
     Enabled = 0,
     Disabled = 0x1,
     DismissOnClick = 0x2,

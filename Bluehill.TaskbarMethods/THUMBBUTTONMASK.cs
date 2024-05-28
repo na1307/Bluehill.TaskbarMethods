@@ -1,6 +1,6 @@
 ﻿namespace Bluehill.TaskbarMethods;
 
-public enum ThumbButtonMask {
+public enum THUMBBUTTONMASK {
     Bitmap = 0x1,
     Icon = 0x2,
     Tooltip = 0x4,

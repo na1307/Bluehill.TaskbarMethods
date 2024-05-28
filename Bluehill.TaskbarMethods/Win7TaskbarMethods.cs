@@ -106,8 +106,8 @@ public class Win7TaskbarMethods : WinXpTaskbarMethods {
     /// Allows a tab to specify whether the main application frame window or the tab window should be used as a thumbnail or in the peek feature under certain circumstances.
     /// </summary>
     /// <param name="hwndTab">The handle of the tab window that is to have properties set. This handle must already be registered through <see cref="RegisterTab(IntPtr, IntPtr)"/>.</param>
-    /// <param name="stpFlags">One or more members of the <see cref="StpFlag"/> enumeration that specify the displayed thumbnail and peek image source of the tab thumbnail.</param>
-    public static void SetTabProperties(IntPtr hwndTab, StpFlag stpFlags) => getTaskbarList4().SetTabProperties(hwndTab, stpFlags);
+    /// <param name="stpFlags">One or more members of the <see cref="STPFLAG"/> enumeration that specify the displayed thumbnail and peek image source of the tab thumbnail.</param>
+    public static void SetTabProperties(IntPtr hwndTab, STPFLAG stpFlags) => getTaskbarList4().SetTabProperties(hwndTab, stpFlags);
 
     private static ITaskbarList4 getTaskbarList4() {
         if (!win7orGreater) {
