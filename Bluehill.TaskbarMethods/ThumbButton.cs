@@ -35,7 +35,7 @@ public struct ThumbButton {
     public string szTip;
 
     /// <summary>
-    /// A combination of <see cref="ThumbButtonFlags"/> values that control specific states and behaviors of the button.
+    /// A combination of <see cref="ThumbButtonStates"/> values that control specific states and behaviors of the button.
     /// </summary>
-    public ThumbButtonFlags dwFlags;
+    public ThumbButtonStates dwFlags;
 }

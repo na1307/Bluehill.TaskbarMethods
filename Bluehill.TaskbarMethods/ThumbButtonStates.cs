@@ -4,7 +4,7 @@
 /// Used by <see cref="ThumbButton"/> to control specific states and behaviors of the button.
 /// </summary>
 [Flags]
-public enum ThumbButtonFlags {
+public enum ThumbButtonStates {
     /// <summary>
     /// The button is active and available to the user.
     /// </summary>
