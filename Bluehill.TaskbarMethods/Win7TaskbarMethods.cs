@@ -28,7 +28,7 @@ public class Win7TaskbarMethods : WinXPTaskbarMethods {
     /// <param name="windowHandle">The handle of the window in which the progress of an operation is being shown. This window's associated taskbar button will display the progress bar.</param>
     /// <param name="taskbarState">Flags that control the current state of the progress button. Specify only one of the following flags; all states are mutually exclusive of all others.</param>
     /// <exception cref="NotSupportedException">If the operating system is less than Windows 7</exception>
-    public static void SetProgressState(IntPtr windowHandle, TBPFLAG taskbarState) => getTaskbarList4().SetProgressState(windowHandle, taskbarState);
+    public static void SetProgressState(IntPtr windowHandle, TaskbarState taskbarState) => getTaskbarList4().SetProgressState(windowHandle, taskbarState);
 
     /// <summary>
     /// Informs the taskbar that a new tab or document thumbnail has been provided for display in an application's taskbar group flyout.
@@ -66,20 +66,20 @@ public class Win7TaskbarMethods : WinXPTaskbarMethods {
     /// </summary>
     /// <param name="windowHandle">The handle of the window whose thumbnail representation will receive the toolbar. This handle must belong to the calling process.</param>
     /// <param name="buttonCounts">The number of buttons defined in the array pointed to by <paramref name="buttonProperties"/>. The maximum number of buttons allowed is 7.</param>
-    /// <param name="buttonProperties">An array of <see cref="THUMBBUTTON"/> structures. Each <see cref="THUMBBUTTON"/> defines an individual button to be added to the toolbar. Buttons cannot be added or deleted later, so this must be the full defined set. Buttons also cannot be reordered, so their order in the array, which is the order in which they are displayed left to right, will be their permanent order.</param>
+    /// <param name="buttonProperties">An array of <see cref="ThumbButton"/> structures. Each <see cref="ThumbButton"/> defines an individual button to be added to the toolbar. Buttons cannot be added or deleted later, so this must be the full defined set. Buttons also cannot be reordered, so their order in the array, which is the order in which they are displayed left to right, will be their permanent order.</param>
     /// <exception cref="NotSupportedException">If the operating system is less than Windows 7</exception>
     [CLSCompliant(false)]
-    public static void ThumbBarAddButtons(IntPtr windowHandle, uint buttonCounts, THUMBBUTTON[] buttonProperties) => getTaskbarList4().ThumbBarAddButtons(windowHandle, buttonCounts, buttonProperties);
+    public static void ThumbBarAddButtons(IntPtr windowHandle, uint buttonCounts, ThumbButton[] buttonProperties) => getTaskbarList4().ThumbBarAddButtons(windowHandle, buttonCounts, buttonProperties);
 
     /// <summary>
     /// Shows, enables, disables, or hides buttons in a thumbnail toolbar as required by the window's current state. A thumbnail toolbar is a toolbar embedded in a thumbnail image of a window in a taskbar button flyout.
     /// </summary>
     /// <param name="windowHandle">The handle of the window whose thumbnail representation contains the toolbar.</param>
     /// <param name="buttonCounts">The number of buttons defined in the array pointed to by <paramref name="buttonProperties"/>. The maximum number of buttons allowed is 7. This array contains only structures that represent existing buttons that are being updated.</param>
-    /// <param name="buttonProperties">An array of <see cref="THUMBBUTTON"/> structures. Each <see cref="THUMBBUTTON"/> defines an individual button. If the button already exists (the iId value is already defined), then that existing button is updated with the information provided in the structure.</param>
+    /// <param name="buttonProperties">An array of <see cref="ThumbButton"/> structures. Each <see cref="ThumbButton"/> defines an individual button. If the button already exists (the iId value is already defined), then that existing button is updated with the information provided in the structure.</param>
     /// <exception cref="NotSupportedException">If the operating system is less than Windows 7</exception>
     [CLSCompliant(false)]
-    public static void ThumbBarUpdateButtons(IntPtr windowHandle, uint buttonCounts, THUMBBUTTON[] buttonProperties) => getTaskbarList4().ThumbBarUpdateButtons(windowHandle, buttonCounts, buttonProperties);
+    public static void ThumbBarUpdateButtons(IntPtr windowHandle, uint buttonCounts, ThumbButton[] buttonProperties) => getTaskbarList4().ThumbBarUpdateButtons(windowHandle, buttonCounts, buttonProperties);
 
     /// <summary>
     /// Specifies an image list that contains button images for a toolbar embedded in a thumbnail image of a window in a taskbar button flyout.
@@ -112,15 +112,15 @@ public class Win7TaskbarMethods : WinXPTaskbarMethods {
     /// <param name="windowHandle">The handle to a window represented in the taskbar.</param>
     /// <param name="rectangle">A RECT structure that specifies a selection within the window's client area, relative to the upper-left corner of that client area.</param>
     /// <exception cref="NotSupportedException">If the operating system is less than Windows 7</exception>
-    public static void SetThumbnailClip(IntPtr windowHandle, in RECT rectangle) => getTaskbarList4().SetThumbnailClip(windowHandle, in rectangle);
+    public static void SetThumbnailClip(IntPtr windowHandle, in Rect rectangle) => getTaskbarList4().SetThumbnailClip(windowHandle, in rectangle);
 
     /// <summary>
     /// Allows a tab to specify whether the main application frame window or the tab window should be used as a thumbnail or in the peek feature under certain circumstances.
     /// </summary>
     /// <param name="hwndTab">The handle of the tab window that is to have properties set. This handle must already be registered through <see cref="RegisterTab(IntPtr, IntPtr)"/>.</param>
-    /// <param name="stpFlags">One or more members of the <see cref="STPFLAG"/> enumeration that specify the displayed thumbnail and peek image source of the tab thumbnail.</param>
+    /// <param name="stpFlags">One or more members of the <see cref="TabProperties"/> enumeration that specify the displayed thumbnail and peek image source of the tab thumbnail.</param>
     /// <exception cref="NotSupportedException">If the operating system is less than Windows 7</exception>
-    public static void SetTabProperties(IntPtr hwndTab, STPFLAG stpFlags) => getTaskbarList4().SetTabProperties(hwndTab, stpFlags);
+    public static void SetTabProperties(IntPtr hwndTab, TabProperties stpFlags) => getTaskbarList4().SetTabProperties(hwndTab, stpFlags);
 
     private static ITaskbarList4 getTaskbarList4() {
         if (!win7orGreater) {

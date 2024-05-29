@@ -7,11 +7,11 @@ namespace Bluehill.TaskbarMethods;
 /// </summary>
 [StructLayout(LayoutKind.Sequential, Pack = 4, CharSet = CharSet.Auto)]
 [CLSCompliant(false)]
-public struct THUMBBUTTON {
+public struct ThumbButton {
     /// <summary>
-    /// A combination of <see cref="THUMBBUTTONMASK"/> values that specify which members of this structure contain valid data; other members are ignored, with the exception of iId, which is always required.
+    /// A combination of <see cref="ThumbButtonMask"/> values that specify which members of this structure contain valid data; other members are ignored, with the exception of iId, which is always required.
     /// </summary>
-    public THUMBBUTTONMASK dwMask;
+    public ThumbButtonMask dwMask;
 
     /// <summary>
     /// The application-defined identifier of the button, unique within the toolbar.
@@ -35,7 +35,7 @@ public struct THUMBBUTTON {
     public string szTip;
 
     /// <summary>
-    /// A combination of <see cref="THUMBBUTTONFLAGS"/> values that control specific states and behaviors of the button.
+    /// A combination of <see cref="ThumbButtonFlags"/> values that control specific states and behaviors of the button.
     /// </summary>
-    public THUMBBUTTONFLAGS dwFlags;
+    public ThumbButtonFlags dwFlags;
 }

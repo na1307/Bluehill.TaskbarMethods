@@ -18,15 +18,15 @@ internal interface ITaskbarList3 : ITaskbarList2 {
 
     // ITaskbarList3
     void SetProgressValue(IntPtr hwnd, ulong ullCompleted, ulong ullTotal);
-    void SetProgressState(IntPtr hwnd, TBPFLAG tbpFlags);
+    void SetProgressState(IntPtr hwnd, TaskbarState tbpFlags);
     void RegisterTab(IntPtr hwndTab, IntPtr hwndMDI);
     void UnregisterTab(IntPtr hwndTab);
     void SetTabOrder(IntPtr hwndTab, IntPtr hwndInsertBefore);
     void SetTabActive(IntPtr hwndTab, IntPtr hwndMDI, uint dwReserved);
-    void ThumbBarAddButtons(IntPtr hwnd, uint cButtons, [MarshalAs(UnmanagedType.LPArray)] THUMBBUTTON[] pButtons);
-    void ThumbBarUpdateButtons(IntPtr hwnd, uint cButtons, [MarshalAs(UnmanagedType.LPArray)] THUMBBUTTON[] pButtons);
+    void ThumbBarAddButtons(IntPtr hwnd, uint cButtons, [MarshalAs(UnmanagedType.LPArray)] ThumbButton[] pButtons);
+    void ThumbBarUpdateButtons(IntPtr hwnd, uint cButtons, [MarshalAs(UnmanagedType.LPArray)] ThumbButton[] pButtons);
     void ThumbBarSetImageList(IntPtr hwnd, IntPtr himl);
     void SetOverlayIcon(IntPtr hwnd, IntPtr hIcon, [MarshalAs(UnmanagedType.LPWStr)] string pszDescription);
     void SetThumbnailTooltip(IntPtr hwnd, [MarshalAs(UnmanagedType.LPWStr)] string pszTip);
-    void SetThumbnailClip(IntPtr hwnd, in RECT prcClip);
+    void SetThumbnailClip(IntPtr hwnd, in Rect prcClip);
 }

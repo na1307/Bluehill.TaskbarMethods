@@ -1,10 +1,10 @@
 ﻿namespace Bluehill.TaskbarMethods;
 
 /// <summary>
-/// Used by <see cref="THUMBBUTTON"/> to control specific states and behaviors of the button.
+/// Used by <see cref="ThumbButton"/> to control specific states and behaviors of the button.
 /// </summary>
 [Flags]
-public enum THUMBBUTTONFLAGS {
+public enum ThumbButtonFlags {
     /// <summary>
     /// The button is active and available to the user.
     /// </summary>
